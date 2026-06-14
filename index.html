@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body {
+      width: 300px;
+      /* height: 200px; */
+      margin: 0;
+      padding: 0;
+      background: transparent !important; /* Force la transparence de base */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-container {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+  </style>
+</head>
+<body>
+    <div class="popup-container" style="display: none;">
+
+      <div class="alert">
+        <h3 class="alerte">Tu as 60 coups pour arreter de scroller</h3>
+      </div>
+  
+      <div>
+        <img src="./image/judge.gif" alt="judging" width="150">
+      </div>
+
+      <div class="timer">
+        <p class="time">60 coups</p>
+      </div>
+    </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

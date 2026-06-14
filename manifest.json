@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Yamete scroll",
+  "description": "Punit avec un compte à rebours chaotique quand tu scrolles sur Instagram, YouTube ou Facebook. Chaque fois que tu reviens, le temps diminue",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+  "icons": {
+    "16": "image/logo512.png",
+    "48": "image/logo512.png",
+    "128": "image/logo512.png",
+    "512": "image/logo512.png"
+  },
+  "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+          "16": "image/logo16.png",
+          "48": "image/logo48.png",
+          "128": "image/logo128.png"
+      }
+  },
+  "background": {
+      "service_worker": "storage.js"
+  },
+  "host_permissions": [
+      "*://*.instagram.com/*",
+      "*://*.youtube.com/*",
+      "*://*.facebook.com/*"
+  ],
+  "web_accessible_resources": [
+      {
+          "resources": ["audio/*", "image/*"],
+          "matches": ["<all_urls>"]
+      }
+  ]
+}
